@@ -9,7 +9,7 @@ module.exports = {
   // basic site info (required)
   name: 'Minh Thong',
   domain: 'www.minhthong.me',
-  author: 'Minh Thong',
+  author: 'Minh Thông',
 
   // open graph metadata (optional)
   description: 'Personal blog of Minh Thong',

@@ -1,6 +1,7 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { IconContext } from 'react-icons'
+import TagManager from 'react-gtm-module'
 
 export default class MyDocument extends Document {
   render() {
@@ -36,6 +37,7 @@ export default class MyDocument extends Document {
 
             <link rel='manifest' href='/manifest.json' />
             
+            TagManager.initialize({ gtmId: 'GTM-59CSR2Q' });
           </Head>
 
           <body>

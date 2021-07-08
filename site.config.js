@@ -22,8 +22,8 @@ module.exports = {
   twitter: 'test',
   github: 'minhthongdoan',
   linkedin: 'minhthongdoan',
-  email: 'minhthongdoan211@gmail.com'
-  facebook: 'mlnhthong'
+  email: 'minhthongdoan211@gmail.com',
+  facebook: 'mlnhthong',
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults

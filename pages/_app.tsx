@@ -48,7 +48,7 @@ if (typeof window !== 'undefined') {
   bootstrap()
 }
 
-export default function App({ Component, pageProps }: AppProps): JSX.Element => {
+const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -64,4 +64,6 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element => 
   // eslint-disable-next-line react/jsx-props-no-spreading
   return <Component {...pageProps} />;
 };
+
+export default App;
 

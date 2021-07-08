@@ -37,7 +37,11 @@ export default class MyDocument extends Document {
 
             <link rel='manifest' href='/manifest.json' />
             
-            TagManager.initialize({ gtmId: 'GTM-59CSR2Q' });
+            const tagManagerArgs = {
+    gtmId: 'GTM-59CSR2Q'
+}
+TagManager.initialize(tagManagerArgs)
+        
           </Head>
 
           <body>

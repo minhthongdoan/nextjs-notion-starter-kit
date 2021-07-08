@@ -88,18 +88,6 @@ export const Footer: React.FC<{
           </a>
         )}
 
-        {config.facebook && (
-          <a
-            className={styles.facebook}
-            href={`https://wwww.facebook.com/${config.email}`}
-            title={`Facebook ${config.author}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaFacebookSquare />
-          </a>
-        )}
-
       </div>
     </footer>
   )

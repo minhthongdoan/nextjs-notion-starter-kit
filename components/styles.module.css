@@ -101,6 +101,14 @@
   color: #0077b5;
 }
 
+.email:hover {
+  color: #bb095c;
+}
+
+.facebook:hover {
+  color: #3b5998;
+}
+
 .comments {
   width: 100%;
   margin-top: 2em;

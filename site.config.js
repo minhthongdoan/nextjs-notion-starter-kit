@@ -1,3 +1,5 @@
+const { facebook } = require("lib/config");
+
 module.exports = {
   // where it all starts -- the site's root Notion page (required)
   rootNotionPageId: 'd2cd60f114614fadb933e1b53fc60dd8',
@@ -20,6 +22,8 @@ module.exports = {
   twitter: 'test',
   github: 'minhthongdoan',
   linkedin: 'minhthongdoan',
+  email: 'minhthongdoan211@gmail.com'
+  facebook: 'mlnhthong'
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults

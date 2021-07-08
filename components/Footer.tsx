@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaTwitter, FaGithub, FaLinkedin, FaFacebookSquare, FaEnvelope } from 'react-icons/fa'
 import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
 import * as config from 'lib/config'
 
@@ -75,6 +75,31 @@ export const Footer: React.FC<{
             <FaLinkedin />
           </a>
         )}
+
+        {config.email && (
+          <a
+            className={styles.email}
+            href={`mailto:${config.email}`}
+            title={`Email ${config.author}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaEnvelope />
+          </a>
+        )}
+
+        {config.facebook && (
+          <a
+            className={styles.facebook}
+            href={`https://wwww.facebook.com/${config.email}`}
+            title={`Facebook ${config.author}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaFacebookSquare />
+          </a>
+        )}
+
       </div>
     </footer>
   )

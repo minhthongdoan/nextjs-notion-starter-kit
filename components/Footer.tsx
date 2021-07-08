@@ -2,7 +2,7 @@ import * as React from 'react'
 import { FaTwitter, FaGithub, FaLinkedin, FaFacebookSquare, FaEnvelope } from 'react-icons/fa'
 import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
 import * as config from 'lib/config'
-import * from 'components/tracker'
+import * as tracker from 'components/tracker'
 
 import styles from './styles.module.css'
 

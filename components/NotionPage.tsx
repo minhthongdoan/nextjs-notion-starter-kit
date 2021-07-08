@@ -31,7 +31,7 @@ import { Page404 } from './Page404'
 import { PageHead } from './PageHead'
 import { PageActions } from './PageActions'
 import { Footer } from './Footer'
-import { PageSocial } from './PageSocial'
+//import { PageSocial } from './PageSocial'
 //import { GitHubShareButton } from './GitHubShareButton'
 import { ReactUtterances } from './ReactUtterances'
 

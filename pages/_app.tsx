@@ -40,7 +40,6 @@ import { bootstrap } from 'lib/bootstrap-client'
 import { fathomId, fathomConfig } from 'lib/config'
 import * as Fathom from 'fathom-client'
 import { AppProps } from "next/app";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 const isProduction = process.env.NODE_ENV === "production";

@@ -47,7 +47,7 @@ module.exports = {
   // example:
   //
    pageUrlOverrides: {
-     '/medievial-baby-art': '912d2ed264b846739da11bdbfb8a5135',
+     '/medieval-baby-art': '912d2ed264b846739da11bdbfb8a5135',
      
    }
   // pageUrlOverrides: null

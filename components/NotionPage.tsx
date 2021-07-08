@@ -156,7 +156,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     }
   } //else {
     //pageAside = <PageSocial />
-  }
+  //}
 
   return (
     <TwitterContextProvider

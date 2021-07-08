@@ -44,7 +44,11 @@ import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 const isProduction = process.env.NODE_ENV === "production";
 
-const App = ({ Component, pageProps }: AppProps): JSX.Element => {
+if (typeof window !== 'undefined') {
+  bootstrap()
+}
+
+export default function App({ Component, pageProps }: AppProps): JSX.Element => {
   const router = useRouter();
 
   useEffect(() => {
@@ -61,31 +65,3 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return <Component {...pageProps} />;
 };
 
-export default App;
-
-
-if (typeof window !== 'undefined') {
-  bootstrap()
-}
-
-export default function App({ Component, pageProps }) {
-  const router = useRouter()
-
-  React.useEffect(() => {
-    if (fathomId) {
-      Fathom.load(fathomId, fathomConfig)
-
-      function onRouteChangeComplete() {
-        Fathom.trackPageview()
-      }
-
-      router.events.on('routeChangeComplete', onRouteChangeComplete)
-
-      return () => {
-        router.events.off('routeChangeComplete', onRouteChangeComplete)
-      }
-    }
-  }, [])
-
-  return <Component {...pageProps} />
-}

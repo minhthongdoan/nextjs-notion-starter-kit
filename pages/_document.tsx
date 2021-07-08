@@ -37,21 +37,21 @@ export default class MyDocument extends Document {
             <link rel='manifest' href='/manifest.json' />
             
             {/* Fathom */}
-           
-            <script>
-            (function(f, a, t, h, o, m){
-              a[h]=a[h]||function(){
-                (a[h].q=a[h].q||[]).push(arguments)
-              };
-              o=f.createElement('script'),
-              m=f.getElementsByTagName('script')[0];
-              o.async=1; o.src=t; o.id='fathom-script';
-              m.parentNode.insertBefore(o,m)
-            &rbrace;)(document, window, '//web-fathom.herokuapp.com/tracker.js', 'fathom');
-            fathom('set', 'siteId', 'CAXFD');
-            fathom('trackPageview');
-            </script>
-            <!-- / Fathom --&gt;
+            
+          <script>
+          (function(f, a, t, h, o, m){
+            a[h]=a[h]||function(){
+              (a[h].q=a[h].q||[]).push(arguments)
+            };
+            o=f.createElement('script'),
+            m=f.getElementsByTagName('script')[0];
+            o.async=1; o.src=t; o.id='fathom-script';
+            m.parentNode.insertBefore(o,m)
+          })(document, window, '//web-fathom.herokuapp.com/tracker.js', 'fathom');
+          fathom('set', 'siteId', 'CAXFD');
+          fathom('trackPageview');
+          </script>
+          <!-- / Fathom -->
             
           </Head>
 

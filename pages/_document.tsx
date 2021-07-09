@@ -1,9 +1,6 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { IconContext } from 'react-icons'
-import { GA_TRACKING_ID } from "../lib/gtag";
-
-const isProduction = process.env.NODE_ENV === "production";
 
 export default class MyDocument extends Document {
   render() {

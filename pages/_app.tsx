@@ -39,31 +39,30 @@ import { useRouter } from 'next/router'
 import { bootstrap } from 'lib/bootstrap-client'
 //import { fathomId, fathomConfig } from 'lib/config'
 //import * as Fathom from 'fathom-client'
-import { AppProps } from "next/app";
-import { useEffect } from "react";
-import * as gtag from "../lib/gtag";
-const isProduction = process.env.NODE_ENV === "production";
+
 
 if (typeof window !== 'undefined') {
   bootstrap()
 }
 
-const App = ({ Component, pageProps }: AppProps) => {
-  const router = useRouter();
+export default function App({ Component, pageProps }) {
+  const router = useRouter()
 
-  useEffect(() => {
-    const handleRouteChange = (url: URL) => {
-      /* invoke analytics function only for production */
-      if (isProduction) gtag.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Component {...pageProps} />;
-};
+  React.useEffect(() => {
+    if (fathomId) {
+      Fathom.load(fathomId, fathomConfig)
 
-export default App;
+      function onRouteChangeComplete() {
+        Fathom.trackPageview()
+      }
 
+      router.events.on('routeChangeComplete', onRouteChangeComplete)
+
+      return () => {
+        router.events.off('routeChangeComplete', onRouteChangeComplete)
+      }
+    }
+  }, [])
+
+  return <Component {...pageProps} />
+}

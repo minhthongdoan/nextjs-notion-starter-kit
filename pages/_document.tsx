@@ -37,6 +37,8 @@ export default class MyDocument extends Document {
 
             <link rel='manifest' href='/manifest.json' />
 
+            <script async data-api="/_hive" src="/bee.js"></script>
+
           </Head>
 
           <body>

@@ -48,6 +48,7 @@ module.exports = {
   //
    pageUrlOverrides: {
      '/medieval-baby-art': '912d2ed264b846739da11bdbfb8a5135',
+     '/analgesia-abdominal-pain': '6ed4f4cfce354f6b858b7fc41daabdd0',
      
    }
   // pageUrlOverrides: null

@@ -39,9 +39,11 @@
   width: 100% !important;
 }
 
+.notion-asset-wrapper-aside >div,
 .notion-aside {
-  word-wrap: break-word;
+  padding-left: 2em;
 }
+
 
 .notion-header .nav-header {
   max-width: 1100px;

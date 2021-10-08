@@ -34,14 +34,38 @@
   margin-bottom: 1em;
 }
 
+/*fix video width*/
 .notion-asset-wrapper-video > div,
 .notion-asset-wrapper-video video {
   width: 100% !important;
 }
+ 
+/*fix table of content*/
+@media (min-width: 1300px) and (min-height: 300px) {
+  .notion-page-content-has-aside {
+    width: calc((100vw + var(--notion-max-width)) / 2 - 12px);
+  }
+}
 
-.notion-asset-wrapper-aside >div,
+@media (min-width: 1300px) and (min-height: 300px) {
+  .notion-page-content-has-aside .notion-page-content-inner {
+    width: calc(var(--notion-max-width) - 24px);
+    max-width: calc(var(--notion-max-width) - 24px);
+  }
+}
+
 .notion-aside {
-  padding-left: 2em;
+  overflow-x: hidden;
+  padding-left: 24px; /* Adjust the space between the main content and the table of content here */
+}
+
+.notion-aside-table-of-contents {
+  max-width: 100%;
+}
+
+.notion-aside-table-of-contents .notion-table-of-contents-item-body {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 

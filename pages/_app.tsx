@@ -40,10 +40,6 @@ import { fathomId, fathomConfig } from 'lib/config'
 import * as Fathom from 'fathom-client'
 
 
-if (typeof window !== 'undefined') {
-  bootstrap()
-}
-
 export default function App({ Component, pageProps }) {
   const router = useRouter()
 
